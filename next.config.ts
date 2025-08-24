@@ -6,6 +6,9 @@ const withNextIntl = createNextIntlPlugin();
 /** @type {NextConfig} */
 const nextConfig: NextConfig = {
   output: "standalone",
+  images:{
+    domains: ['storage.c2.liara.space'],
+  }
 };
 
 export default withNextIntl(nextConfig);
