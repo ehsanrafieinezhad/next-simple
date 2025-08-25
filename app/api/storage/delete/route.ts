@@ -6,7 +6,7 @@ export async function DELETE(req: Request) {
   const { key } = await req.json();
 
   const command = new DeleteObjectCommand({
-    Bucket: process.env.LIARA_BUCKET_NAME,
+    Bucket: process.env.BUCKET_NAME,
     Key: key,
   });
 

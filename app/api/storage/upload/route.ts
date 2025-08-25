@@ -11,7 +11,7 @@ export async function POST(req: Request) {
   const myfile = 'test/'+file.name;
 
   const command = new PutObjectCommand({
-    Bucket: process.env.LIARA_BUCKET_NAME,
+    Bucket: process.env.BUCKET_NAME,
     Key: myfile,
     Body: buffer,
     ContentType: file.type,

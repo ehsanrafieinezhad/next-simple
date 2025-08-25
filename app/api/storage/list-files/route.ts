@@ -4,7 +4,7 @@ import { s3 } from "@/lib/s3";
 
 export async function GET() {
   const command = new ListObjectsV2Command({
-    Bucket: process.env.LIARA_BUCKET_NAME,
+    Bucket: process.env.BUCKET_NAME,
   });
 
   const data = await s3.send(command);

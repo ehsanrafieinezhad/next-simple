@@ -10,6 +10,8 @@ export default function Home() {
         <h1 className="py-4 text-2xl font-semibold">{t("title")}</h1>
         <Link href="/about" className="text-blue-400 text-sm underline">{t("about")}</Link>
         <Link href="/en/storage" className="text-blue-400 text-sm underline">go to Storage</Link>
+        <Link href="/en/upload" className="text-blue-400 text-sm underline">go to s3 upload</Link>
+        <Link href="/en/gptupload" className="text-blue-400 text-sm underline">go to GPT Storage</Link>
     </div>
   );
 }

@@ -2,11 +2,11 @@
 import { S3Client } from "@aws-sdk/client-s3";
 
 export const s3 = new S3Client({
-  region: "default",
-  endpoint: process.env.LIARA_ENDPOINT,
+  region: process.env.REGION,
+  endpoint: process.env.ENDPOINT,
   credentials: {
-    accessKeyId: process.env.LIARA_ACCESS_KEY!,
-    secretAccessKey: process.env.LIARA_SECRET_KEY!,
+    accessKeyId: process.env.ACCESS_KEY!,
+    secretAccessKey: process.env.SECRET_KEY!,
   },
   forcePathStyle: true,
 });

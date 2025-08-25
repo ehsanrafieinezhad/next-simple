@@ -7,7 +7,7 @@ export async function POST(req: Request) {
   const { key, contentType } = await req.json();
 
   const command = new CreateMultipartUploadCommand({
-    Bucket: process.env.LIARA_BUCKET_NAME!,
+    Bucket: process.env.BUCKET_NAME!,
     Key: key,
     ContentType: contentType,
   });

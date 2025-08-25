@@ -12,7 +12,7 @@ export async function POST(req: Request) {
 
   for (const partNumber of partNumbers) {
     const command = new UploadPartCommand({
-      Bucket: process.env.LIARA_BUCKET_NAME!,
+      Bucket: process.env.BUCKET_NAME!,
       Key: key,
       UploadId: uploadId,
       PartNumber: partNumber,

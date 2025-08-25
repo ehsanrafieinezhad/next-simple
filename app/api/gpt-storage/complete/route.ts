@@ -8,7 +8,7 @@ export async function POST(req: Request) {
   // parts = [{ PartNumber: 1, ETag: "etag-123" }, ...]
 
   const command = new CompleteMultipartUploadCommand({
-    Bucket: process.env.LIARA_BUCKET_NAME!,
+    Bucket: process.env.BUCKET_NAME!,
     Key: key,
     UploadId: uploadId,
     MultipartUpload: {
