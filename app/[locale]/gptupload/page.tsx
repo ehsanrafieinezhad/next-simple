@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { MultipartUploader } from "@/lib/GptMultipartUploader";
+import CircleProgress from "@/components/circle-progress";
+import GptUploader from "@/components/gpt-upload";
 
 export default function GptUpload() {
   const [progress, setProgress] = useState(0);
@@ -22,7 +24,14 @@ export default function GptUpload() {
       <div className="bg-blue-50 p-2 rounded-lg">
         <input type="file" onChange={handleUpload} />
         <p>Progress: {progress}%</p>
+
+        <CircleProgress progress={99} size={40}/>
       </div>
+      <GptUploader
+        acceptedTypes="image/*"
+        maxSizeInMB={5}
+        onError={(err) => console.warn("Upload error:", err)}
+      />
     </div>
   );
 }
